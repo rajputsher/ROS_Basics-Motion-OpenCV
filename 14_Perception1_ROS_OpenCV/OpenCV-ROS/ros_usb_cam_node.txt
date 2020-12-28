@@ -1,0 +1,26 @@
+1. To run the usb_cam node 
+	rosrun usb_cam usb_cam_node _pixel_format:=yuyv
+	
+2. Make sure the node is running by seeing the topics :
+	rostopic list
+output: 
+	/rosout
+	/rosout_agg
+	/usb_cam/camera_info
+Topic to see the live feed:
+	/usb_cam/image_raw
+	/usb_cam/image_raw/compressed
+	/usb_cam/image_raw/compressed/parameter_descriptions
+	/usb_cam/image_raw/compressed/parameter_updates
+	/usb_cam/image_raw/compressedDepth
+	/usb_cam/image_raw/compressedDepth/parameter_descriptions
+	/usb_cam/image_raw/compressedDepth/parameter_updates
+	/usb_cam/image_raw/theora
+	/usb_cam/image_raw/theora/parameter_descriptions
+	/usb_cam/image_raw/theora/parameter_updates
+
+3. Run this topic with the following command:
+	rosrun image_view  image_view image:=/usb_cam/image_raw
+
+4. Now run the image_pub_sub.py to see the pattern drawn on the image after transforming the ROS image format to OpenCV image.
+i.e. convert ros_image into an opencv-compatible image
