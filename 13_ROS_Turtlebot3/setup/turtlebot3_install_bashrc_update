@@ -1,0 +1,13 @@
+alias burger='export TURTLEBOT3_MODEL=burger'
+alias waffle='export TURTLEBOT3_MODEL=waffle'
+alias tb3fake='roslaunch turtlebot3_fake turtlebot3_fake.launch'
+alias tb3teleop='roslaunch turtlebot3_teleop turtlebot3_teleop_key.launch'
+alias tb3='roslaunch turtlebot3_gazebo turtlebot3_empty_world.launch'
+alias tb3maze='roslaunch turtle3_gazebo turtlebot3_world.launch'
+alias tb3house='roslaunch turtle3_gazebo turtlebot3_house.launch'
+
+source /opt/ros/noetic/setup.bash
+source /home/shivsayali/catkin_ws/devel/setup.bash
+#echo $ROS_PACKAGE_PATH
+export TURTLEBOT3_MODEL=waffle
+#export SVGA_VPGU10=0 # For virtual machine only
